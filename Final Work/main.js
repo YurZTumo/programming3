@@ -1,62 +1,11 @@
-function matrixGenerate(matLength, gr, grEat, pred, ven, hun) {
-    let matrix = []
-    for (let i = 0; i < matLength; i++) {
-        matrix.push([])
-        for (let j = 0; j < matLength; j++) {
-            matrix[i].push(0)
-        }
-    }
+var socket = io()
 
-    for (let i = 0; i < grEat; i++) {
-        let x = Math.floor(Math.random() * matLength)
-        let y = Math.floor(Math.random() * matLength)
-        if (matrix[y][x] == 0) {
-            matrix[y][x] = 2
-        }
-    }
-    for (let i = 0; i < gr; i++) {
-        let x = Math.floor(Math.random() * matLength)
-        let y = Math.floor(Math.random() * matLength)
-        if (matrix[y][x] == 0) {
-            matrix[y][x] = 1
-        }
-    }
-    for (let i = 0; i < pred; i++) {
-        let x = Math.floor(Math.random() * matLength)
-        let y = Math.floor(Math.random() * matLength)
-        if (matrix[y][x] == 0) {
-            matrix[y][x] = 3
-        }
-    }
 
-    for (let i = 0; i < ven; i++) {
-        let x = Math.floor(Math.random() * matLength)
-        let y = Math.floor(Math.random() * matLength)
-        if (matrix[y][x] == 0) {
-            matrix[y][x] = 4
-        }
-    } 
-    for (let i = 0; i < hun; i++) {
-        let x = Math.floor(Math.random()*matLength)
-        let y = Math.floor(Math.random()*matLength)
-        if(matrix[y][x] == 0) {
-        matrix[y][x] = 5
-        }
-        }
-    return matrix
-}
-
-let matrix = matrixGenerate(20, 18, 9, 7, 5, 5)
 
 var side = 120;
-let grassArr = []
-let grassEaterArr = []
-let PredatorArr = []
-let VenomArr = []
-let HunterArr = []
+
 
 function setup() {
-    frameRate(5);
     createCanvas(matrix[0].length * side, matrix.length * side);
     background('#acacac');
 
