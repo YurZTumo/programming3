@@ -46,7 +46,7 @@ function matrixGenerate(matLength, gr, grEat, pred, ven, hun) {
     return matrix
 }
 
-let matrix = matrixGenerate(30, 35, 9, 7, 5, 5)
+let matrix = matrixGenerate(20, 18, 9, 7, 5, 5)
 
 var side = 120;
 let grassArr = []
