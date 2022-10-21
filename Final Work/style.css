@@ -1,3 +1,61 @@
 body{
     background: radial-gradient(rgb(147,68,249),rgb(21, 93, 99));
 }
+
+.buttons{
+    margin-left: 125px;
+}
+
+.addGrass{
+    background-color: rgb(137,242,187);
+    height: 50px;
+    border-radius: 20%;
+    border: none;
+    margin-right: 125px;
+    margin-top: 150px; 
+}
+
+.addGrassEater{
+    background-color: rgb(137,242,187);
+    height: 50px;
+    border-radius: 20%;
+    border: none;
+    margin-right: 125px;
+    margin-top: 150px;
+}
+
+.addPredator{
+    background-color: rgb(137,242,187);
+    height: 50px;
+    border-radius: 20%;
+    border: none;
+    margin-right: 125px;
+    margin-top: 150px;
+}
+
+.addVenom{
+    background-color: rgb(137,242,187);
+    height: 50px;
+    border-radius: 20%;
+    border: none;
+    margin-right: 125px;
+    margin-top: 150px;
+}
+
+.addHunter{
+    background-color: rgb(137,242,187);
+    height: 50px;
+    border-radius: 20%;
+    border: none;
+    margin-right: 125px;
+    margin-top: 150px;
+}
+
+.killAll{
+    background-color: rgb(137,242,187);
+    height: 50px;
+    border-radius: 20%;
+    border: none;
+    margin-left: 460px;
+    margin-top: 50px;
+}
