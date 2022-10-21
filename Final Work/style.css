@@ -3,59 +3,192 @@ body{
 }
 
 .buttons{
-    margin-left: 125px;
+    margin-left: 50px;
+}
+
+.addButtons{
+    margin-left: 20px;
+}
+
+.killButton{
+    margin-left: 14px;
 }
 
 .addGrass{
-    background-color: rgb(137,242,187);
+    background-color:#2e466e;
     height: 50px;
-    border-radius: 20%;
+	border-radius:17px;
     border: none;
     margin-right: 125px;
-    margin-top: 150px; 
+    margin-top: 150px;
+    box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+
+.addGrass:hover {
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color:#415989;
+}
+
+.addGrass:active {
+	position:relative;
+	top:1px;
 }
 
 .addGrassEater{
-    background-color: rgb(137,242,187);
+    background-color:#2e466e;
     height: 50px;
-    border-radius: 20%;
+	border-radius:17px;
     border: none;
     margin-right: 125px;
     margin-top: 150px;
+    box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+
+.addGrassEater:hover {
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color:#415989;
+}
+.addGrassEater:active {
+	position:relative;
+	top:1px;
 }
 
 .addPredator{
-    background-color: rgb(137,242,187);
+    background-color:#2e466e;
     height: 50px;
-    border-radius: 20%;
+	border-radius:17px;
     border: none;
     margin-right: 125px;
     margin-top: 150px;
+    box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+
+.addPredator:hover {
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color:#415989;
+}
+.addPredator:active {
+	position:relative;
+	top:1px;
 }
 
 .addVenom{
-    background-color: rgb(137,242,187);
+    background-color:#2e466e;
     height: 50px;
-    border-radius: 20%;
+	border-radius:17px;
     border: none;
     margin-right: 125px;
     margin-top: 150px;
+    box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+
+.addVenom:hover {
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color:#415989;
+}
+.addVenom:active {
+	position:relative;
+	top:1px;
 }
 
 .addHunter{
-    background-color: rgb(137,242,187);
+    background-color:#2e466e;
     height: 50px;
-    border-radius: 20%;
+	border-radius:17px;
     border: none;
     margin-right: 125px;
     margin-top: 150px;
+    box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+
+.addHunter:hover {
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color:#415989;
+}
+.addHunter:active {
+	position:relative;
+	top:1px;
 }
 
 .killAll{
-    background-color: rgb(137,242,187);
+    background-color:#2e466e;
     height: 50px;
-    border-radius: 20%;
+	border-radius:17px;
+    margin-left: 520px;
     border: none;
-    margin-left: 460px;
     margin-top: 50px;
+    height: 50px;
+    border: none;
+    margin-right: 125px;
+    margin-top: 150px;
+    box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+
+.killAll:hover {
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color:#415989;
+}
+.killAll:active {
+	position:relative;
+	top:1px;
 }
