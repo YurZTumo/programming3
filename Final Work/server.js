@@ -62,7 +62,7 @@ function matrixGenerate(matLength, gr, grEat, pred, ven, hun) {
         }
     return matrix
 }
-matrix = matrixGenerate(20, 5, 4, 3, 2, 1)
+matrix = matrixGenerate(20, 10, 10, 10, 10, 10)
 
 io.sockets.emit("send matrix", matrix)
 
@@ -133,21 +133,22 @@ function game(){
 
 setInterval(game, 200)
 
-io.on('connection', () => {
-    createObject()
+///
+
+///
+io.on('connection', (socket) => {
+    createObject();
   });
 
   var statistics = {};
 
-  setInterval(function(){
+  setInterval(function() {
     statistics.grass = grassArr.length;
     statistics.grassEater = grassEaterArr.length;
     statistics.Predator = PredatorArr.length;
     statistics.Venom = VenomArr.length;
     statistics.Hunter = HunterArr.length;
-  })
-
-  fs.writeFile("statistics.json", JSON.stringify(statistics),function(){
-      console.log("send")
-  }
-  )
+    fs.writeFile("statistics.json", JSON.stringify(statistics), function(){
+        console.log("send")
+    })
+},1000)
