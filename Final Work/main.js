@@ -33,3 +33,5 @@ function nkarel(matrix) {
 
 
 socket.on('send matrix', nkarel)
+
+alert("hello")
