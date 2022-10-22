@@ -2,11 +2,11 @@ var socket = io()
 
 
 
-var side = 40;
+var side = 15;
 
 
 function setup() {
-    createCanvas(20 * side,20 * side);
+    createCanvas(30 * side,30 * side);
 }
 
 function nkarel(matrix) {
@@ -33,3 +33,22 @@ function nkarel(matrix) {
 
 
 socket.on('send matrix', nkarel)
+
+function kill() {
+    socket.emit("kill")
+}
+function addGrass() {
+    socket.emit("add grass")
+}
+function addGrassEater() {
+    socket.emit("add grassEater")
+}
+function addPredator() {
+    socket.emit("add predator")
+}
+function addVenom() {
+    socket.emit("add venom")
+}
+function addHunter() {
+    socket.emit("add hunter")
+}

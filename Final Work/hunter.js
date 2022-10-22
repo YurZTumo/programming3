@@ -49,7 +49,7 @@ module.exports = class Hunter extends LivingCreature{
             let newY = newCell[1]
             matrix[newY][newX] = 5
             let newGr = new Hunter(newX, newY)
-            HunterArr.push(newGr)
+            hunterArr.push(newGr)
             this.energy = 10
         }
     }
@@ -86,9 +86,9 @@ module.exports = class Hunter extends LivingCreature{
                 }
             }
 
-            for (var i in PredatorArr) {
-                if (newX == PredatorArr[i].x && newY == PredatorArr[i].y) {
-                    PredatorArr.splice(i, 1);
+            for (var i in predatorArr) {
+                if (newX == predatorArr[i].x && newY == predatorArr[i].y) {
+                    predatorArr.splice(i, 1);
                     break;
                 }
             }
@@ -105,9 +105,9 @@ module.exports = class Hunter extends LivingCreature{
 
     die() {
         matrix[this.y][this.x] = 0
-        for (var i in HunterArr) {
-            if (this.x == HunterArr[i].x && this.y == HunterArr[i].y) {
-                HunterArr.splice(i, 1);
+        for (var i in hunterArr) {
+            if (this.x == hunterArr[i].x && this.y == hunterArr[i].y) {
+                hunterArr.splice(i, 1);
                 break;
             }
         }

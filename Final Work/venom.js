@@ -56,7 +56,7 @@ module.exports = class Venom extends LivingCreature {
             let newY = newCell[1]
             matrix[newY][newX] = 4
             let newGr = new Venom(newX, newY)
-            VenomArr.push(newGr)
+            venomArr.push(newGr)
             this.energy = 10
         }
     }
@@ -98,15 +98,15 @@ module.exports = class Venom extends LivingCreature {
                     break;
                 }
             }
-            for (var i in PredatorArr) {
-                if (newX == PredatorArr[i].x && newY == PredatorArr[i].y) {
-                    PredatorArr.splice(i, 1);
+            for (var i in predatorArr) {
+                if (newX == predatorArr[i].x && newY == predatorArr[i].y) {
+                    predatorArr.splice(i, 1);
                     break;
                 }
             }
-            for (var i in HunterArr) {
-                if (newX == HunterArr[i].x && newY == HunterArr[i].y) {
-                    HunterArr.splice(i, 1);
+            for (var i in hunterArr) {
+                if (newX == hunterArr[i].x && newY == hunterArr[i].y) {
+                    hunterArr.splice(i, 1);
                     break;
 
                 }
@@ -125,9 +125,9 @@ module.exports = class Venom extends LivingCreature {
 
     die() {
         matrix[this.y][this.x] = 0
-        for (var i in VenomArr) {
-            if (this.x == VenomArr[i].x && this.y == VenomArr[i].y) {
-                VenomArr.splice(i, 1);
+        for (var i in venomArr) {
+            if (this.x == venomArr[i].x && this.y == venomArr[i].y) {
+                venomArr.splice(i, 1);
                 break;
             }
         }
