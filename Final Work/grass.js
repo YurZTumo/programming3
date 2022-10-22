@@ -9,8 +9,8 @@ module.exports = class Grass extends LivingCreature {
 
     mul() {
         this.multiply++
-        let emptyCelss = this.chooseCell(0)
-        let newCell = emptyCels[Math.floor(Math.random() * emptyCels.length)]
+        let emptyCells = this.chooseCell(0)
+        let newCell = emptyCells[Math.floor(Math.random() * emptyCells.length)]
         if (this.multiply >= 8 && newCell) {
             let newX = newCell[0]
             let newY = newCell[1]
