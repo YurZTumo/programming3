@@ -52,3 +52,5 @@ function addVenom() {
 function addHunter() {
     socket.emit("add hunter")
 }
+
+alert("hello")
