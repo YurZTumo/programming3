@@ -15,7 +15,7 @@ server.listen(3000, ()=> {
 })
 
 
-function matrixGenerate(matLength, gr, grEat, pred, ven, hun) {
+function matrixGenerate(matLength, gr, grEat, pred, ven, hun, tr) {
     let matrix = []
     for (let i = 0; i < matLength; i++) {
         matrix.push([])
@@ -59,10 +59,17 @@ function matrixGenerate(matLength, gr, grEat, pred, ven, hun) {
         if(matrix[y][x] == 0) {
         matrix[y][x] = 5
         }
+    for (let i = 0; i < tr; i++) {
+        let x = Math.floor(Math.random()*matLength)
+        let y = Math.floor(Math.random()*matLength)
+        if(matrix[y][x] == 0) {
+        matrix[y][x] = 6
+        }
         }
     return matrix
-}
-matrix = matrixGenerate(20, 10, 10, 10, 10, 10)
+      }
+    }
+matrix = matrixGenerate(20, 10, 10, 10, 10, 10, 5)
 
 io.sockets.emit("send matrix", matrix)
 
@@ -71,12 +78,14 @@ grassEaterArr = []
 predatorArr = []
 venomArr = []
 hunterArr = []
+trashArr = []
 
 Grass = require("./grass");
 GrassEater = require("./grassEater");
 Predator = require("./predator")
 Venom = require("./venom")
 Hunter = require("./hunter")
+Trash = require("./trash")
 
 
 
@@ -98,6 +107,10 @@ function createObject(){
             } else if (matrix[y][x] == 5) {
                 let gr = new Hunter(x, y)
                 hunterArr.push(gr)
+            }
+            else if (matrix[y][x] == 6) {
+                let gr = new Trash(x, y)
+                trashArr.push(gr)
             }
         }
     }
@@ -127,7 +140,11 @@ function game(){
     for (let i = 0; i < hunterArr.length; i++) {
         hunterArr[i].eat()
     }
-
+    for (let i = 0; i < trashArr.length; i++) {
+       setInterval(()=>{
+        trashArr[i].die()
+       },5000)
+    }
     io.sockets.emit('send matrix', matrix)
 }
 
@@ -208,6 +225,18 @@ function addHunter() {
     }
     io.sockets.emit("send matrix", matrix);
 }
+
+function addTrash() {
+    for (var i = 0; i < 7; i++) {
+    var x = Math.floor(Math.random() * matrix[0].length)
+    var y = Math.floor(Math.random() * matrix.length)
+        if (matrix[y][x] == 0) {
+            matrix[y][x] = 6
+            trashArr.push(new Trash(x, y, 6))
+        }
+    }
+    io.sockets.emit("send matrix", matrix);
+}
 ///
 io.on('connection', (socket) => {
     createObject();
@@ -217,6 +246,7 @@ io.on('connection', (socket) => {
     socket.on("add predator", addPredator);
     socket.on("add venom", addVenom);
     socket.on("add hunter", addHunter);
+    socket.on("add trash", addTrash);
   });
 
   var statistics = {};
@@ -227,6 +257,7 @@ io.on('connection', (socket) => {
     statistics.Predator = predatorArr.length;
     statistics.Venom = venomArr.length;
     statistics.Hunter = hunterArr.length;
+    statistics.Trash = trashArr.length
     fs.writeFile("statistics.json", JSON.stringify(statistics), function(){
         console.log("send")
     })

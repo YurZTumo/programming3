@@ -2,7 +2,7 @@ var socket = io()
 
 
 
-var side = 15;
+var side = 60;
 
 
 function setup() {
@@ -25,6 +25,8 @@ function nkarel(matrix) {
                 fill("black");
             } else if (matrix[y][x] == 5) {
                 fill("brown")
+            } else if (matrix[y][x] == 6) {
+                fill("grey")
             };
             rect(x * side, y * side, side, side);
         }
@@ -51,4 +53,7 @@ function addVenom() {
 }
 function addHunter() {
     socket.emit("add hunter")
+}
+function addTrash() {
+    socket.emit("add trash")
 }
