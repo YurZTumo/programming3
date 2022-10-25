@@ -210,3 +210,8 @@ body {
 	position:relative;
 	top:1px;
 }
+
+
+canvas{
+	margin-left: 500px;
+}

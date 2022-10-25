@@ -43,7 +43,7 @@ function addGrass() {
 function addGrassEater() {
     socket.emit("add grassEater")
 }
-function addPredator() {
+function addPredator(){
     socket.emit("add predator")
 }
 function addVenom() {

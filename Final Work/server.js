@@ -214,7 +214,7 @@ io.on('connection', (socket) => {
     socket.on("kill", kill);
     socket.on("add grass", addGrass);
     socket.on("add grassEater", addGrassEater);
-    socket.on("add venom", addPredator);
+    socket.on("add predator", addPredator);
     socket.on("add venom", addVenom);
     socket.on("add hunter", addHunter);
   });
