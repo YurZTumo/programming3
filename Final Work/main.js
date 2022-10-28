@@ -2,7 +2,7 @@ var socket = io()
 
 
 
-var side = 15;
+var side = 20;
 
 socket.on("weather", function (data) {
     weath = data;

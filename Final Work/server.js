@@ -141,11 +141,6 @@ function game(){
     for (let i = 0; i < hunterArr.length; i++) {
         hunterArr[i].eat()
     }
-    for (let i = 0; i < trashArr.length; i++) {
-       setInterval(()=>{
-        trashArr[i].die()
-       },5000)
-    }
     io.sockets.emit('send matrix', matrix)
 }
 
