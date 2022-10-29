@@ -3,7 +3,7 @@ var socket = io()
 
 
 var side = 20;
-
+var weath = "winter";
 socket.on("weather", function (data) {
     weath = data;
 })
@@ -35,7 +35,7 @@ function nkarel(matrix) {
             } else if (matrix[y][x] == 4) {
                 fill("black");
             } else if (matrix[y][x] == 5) {
-                fill("brown")
+                fill("#964B00")
             } else if (matrix[y][x] == 6) {
                 fill("grey")
             };
